@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation loading</title>
+  <link rel="stylesheet" href="MoyMathWebStyle.css">
+  <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+</head>
+<body>
+  <div class="loader">
+    <div class="rectangle left"></div>
+    <div class="square"></div>
+    <div class="rectangle right"></div>
+  </div>
+  
+  <img src="Images/Image2.png" alt="صورة" class="my-image" />
+  <img src="Images/fleche.png" alt="arrow" id="arrowBtn" class="click-image" onclick="toggleAnimation()" />
+  
+  <div class="text-container">
+    <div class="text-bg"></div>
+    <div id="sc-text" class="sc-texte">Mathématiques</div>
+  </div>
+  <div class="cards-container logins-container "id="cardscontainer">
+    <!-- Arabe -->
+    <div class="login-cardd" id="arabecard">
+      <h2>Arabe</h2>
+      <div class="input-group">
+        <input type="number" id="synthesearabe" placeholder="Synthèse" />
+        <label for="synthesearabe"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-arabe" id="Moyenarabe">Moyenne Arabe:</div>
+     <!-- Anglais -->
+     <div class="login-card">
+      <h2>Anglais</h2>
+      <div class="input-group">
+        <input type="number" id="oraleanglais" placeholder=" " oninput="calculateMoyenneanglais()" />
+        <label for="oraleanglais"><span class="label-text">Orale</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="controleanglais" placeholder=" " oninput="calculateMoyenneanglais()" />
+        <label for="controleanglais"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="syntheseanglais" placeholder=" " oninput="calculateMoyenneanglais()" />
+        <label for="syntheseanglais"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-anglais" id="moyenanglais">Moyenne Anglais:</div>
+       <!-- Français -->
+    <div class="login-card">
+      <h2>Français</h2>
+      <div class="input-group">
+        <input type="number" id="oralefrancais" placeholder=" " oninput="calculateMoyennefrancais()" />
+        <label for="oralefrancais"><span class="label-text">Orale</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="controlefrancais" placeholder=" " oninput="calculateMoyennefrancais()" />
+        <label for="controlefrancais"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="synthesefrancais" placeholder=" " oninput="calculateMoyennefrancais()" />
+        <label for="synthesefrancais"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-francais" id="moyenfrançais">Moyenne Français:</div>
+    
+    <!-- Option -->
+    <div class="login-cardd">
+      <h2>Option</h2>
+      <div class="input-group">
+        <input type="number" id="oraleoption" placeholder=" " oninput="calculateMoyenneoption()" />
+        <label for="oraleoption"><span class="label-text">Orale</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="controleoption" placeholder=" " oninput="calculateMoyenneoption()" />
+        <label for="controleoption"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="syntheseoption" placeholder=" " oninput="calculateMoyenneoption()" />
+        <label for="syntheseoption"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-option" id="moyenoption">Moyenne Option:</div>
+    
+    <!-- Math -->
+    <div class="login-cardd">
+      <h2>Math</h2>
+      <div class="input-group">
+        <input type="number" id="controlemath" placeholder=" " oninput="calculateMoyennemath()" />
+        <label for="controlemath"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="synthesemath" placeholder=" " oninput="calculateMoyennemath()" />
+        <label for="synthesemath"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-math" id="moyenmath">Moyenne Math:</div>
+    
+    <!-- Physique -->
+    <div class="login-card">
+      <h2>Physique</h2>
+      <div class="input-group">
+        <input type="number" id="tpphysique" placeholder=" " oninput="calculateMoyennephysique()" />
+        <label for="tpphysique"><span class="label-text">Tp</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="controlephysique" placeholder=" " oninput="calculateMoyennephysique()" />
+        <label for="controlephysique"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="synthesephysique" placeholder=" " oninput="calculateMoyennephysique()" />
+        <label for="synthesephysique"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-physique" id="moyenphysique">Moyenne Physique:</div>
+    
+    <!-- Technique -->
+    <div class="login-card">
+      <h2>S.V.T</h2>
+      <div class="input-group">
+        <input type="number" id="controlemeca" placeholder=" " oninput="calculateMoyennetechnique()" />
+        <label for="controlemeca"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="synthesemeca" placeholder=" " oninput="calculateMoyennetechnique()" />
+        <label for="synthesemeca"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-technique" id="moyentechnique">Moyenne S.V.T:</div>
+    
+    <!-- Philosophie -->
+    <div class="login-card">
+      <h2>Philosophie</h2>
+      <div class="input-group">
+        <input type="number" id="oralephilo" placeholder=" " oninput="calculateMoyennephilosophie()" />
+        <label for="oralephilo"><span class="label-text">Orale</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="controlephilo" placeholder=" " oninput="calculateMoyennephilosophie()" />
+        <label for="controlephilo"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="synthesephilo" placeholder=" " oninput="calculateMoyennephilosophie()" />
+        <label for="synthesephilo"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-philosophie" id="moyenphilo">Moyenne Philosophie:</div>
+    
+    <!-- Informatique -->
+    <div class="login-cardd">
+      <h2>Informatique</h2>
+      <div class="input-group">
+        <input type="number" id="controleinfo" placeholder=" " oninput="calculateMoyenneinformatique()" />
+        <label for="controleinfo"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="syntheseinfo" placeholder=" " oninput="calculateMoyenneinformatique()" />
+        <label for="syntheseinfo"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-informatique" id="moyeninfo">Moyenne Informatique:</div>
+    
+    <!-- Sport -->
+    <div class="login-carddd">
+      <h2>Sport</h2>
+      <h4>Si la matiére est dispensé, mettez '.' dans n'importe case</h4>
+      <div class="input-group">
+        <input type="number" id="controlesport" placeholder=" " oninput="calculateMoyennesport()" />
+        <label for="controlesport"><span class="label-text">Controle</span></label>
+      </div>
+      <div class="input-group">
+        <input type="number" id="synthesesport" placeholder=" " oninput="calculateMoyennesport()" />
+        <label for="synthesesport"><span class="label-text">Synthese</span></label>
+      </div>
+    </div>
+    <div class="result-sport" id="moyensport">Moyenne Sport:</div>
+   
+     
+
+  
+    
+    
+  <div class="login-carde special-card" id="resultcard">
+    <img src="Images/Result.png" alt="res" id="resBtn" class="clicked-image" />
+      <img src="Images/Tap.png" alt="tap" id="TapBtn" class="Tap-image" />
+    <div class="white-box" id="whiteBox">
+      
+      <h2>Votre moyenne générale est</h2>
+    </div>
+  </div>
+  
+     
+  <div class="log" id="pluscard">
+    
+    </div>
+  </div>
+  
+   
+   
+    
+   
+  
+  <script src="ScriptMoyTech.js"></script>
+  <script src="BottomSheet.js"></script>
+  <script src="CalculMoyMath.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

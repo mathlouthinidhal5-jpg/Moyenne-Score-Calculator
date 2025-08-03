@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Animation loading</title>
+    <link rel="stylesheet" href="ScoreLettreWebStyle.css">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="loader">
+      <div class="rectangle left"></div>
+      <div class="square"></div>
+      <div class="rectangle right"></div>
+    </div>
+
+    <!-- الصورة الأساسية -->
+    <img src="Images/Image1.png" alt="صورة" class="my-image" />
+
+    <!-- صورة السهم التي نضغط عليها -->
+    <img src="Images/fleche.png" alt="arrow" id="arrowBtn" class="click-image" />
+
+    <div class="text-container">
+      <div class="text-bg"></div>
+      <div id="sc-text" class="sc-texte">Lettres</div>
+    </div>
+   <div class="cards-container logins-container "id="cardscontainer">
+    <div class="login-card">
+      <div class="input-group">
+        <input type="number" id="noteTechnique" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteTechnique"><span class="label-text">Pensée Islamic</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteAnglais" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteAnglais"><span class="label-text">Anglais</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteFrancais" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteFrancais"><span class="label-text">Français</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteArabe" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteArabe"><span class="label-text">Arabe</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="notePhilosophie" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="notePhilosophie"><span class="label-text">Philosophie</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteInformatique" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteInformatique"><span class="label-text">Informatique</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteTp" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteTp"><span class="label-text">His/Geo</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteSport" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteSport"><span class="label-text">Sport</span></label>
+      </div>
+       <div class="input-group">
+        <input type="number" id="noteOption" placeholder=" " oninput="calculateMoyenneScoreTech()" />
+        <label for="noteOption"><span class="label-text">Option</span></label>
+      </div>
+    </div>
+    </div>
+    
+
+    <!-- ✅ لوحة السحب الجديدة -->
+ <!-- ✅ لوحة السحب الجديدة -->
+<div class="bottom-sheet" id="bottomSheet">
+  <div class="sheet-content">
+    <div class="containr">
+        <div class="rectan" id="rect1"> </div>
+        <div class="rectan" id="rect2"></div>
+    </div>
+       <p><div class="result-moyen" id="moyenne">Moyenne BAC:</div>
+    <div class="result-score" id="score">Score BAC:</div>
+    </p>
+  </div>
+</div>
+
+    <script src="ScriptMoyTech.js"></script>
+    <script src="BottomSheet.js"></script>
+    <script src="CalculMoyLettre.js"></script>
+  </body>
+
+
+    

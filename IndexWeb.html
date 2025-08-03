@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="IndexWebStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2196f3">
+    <title>index</title>
+  </head>
+  <body>
+
+    <label for="section">Veuillez choisir votre section :</label>
+    <input list="sections" id="section" name="section" placeholder="Commencez à taper...">
+    <datalist id="sections">
+      <option value="sc.techniques">
+      <option value="sc.expérimentales">
+      <option value="sc.de l'informatique">
+      <option value="mathématiques">
+      <option value="economie et gestion">
+      <option value="lettres">
+      <option value="sports">
+    </datalist>
+
+    <label for="scoremoy">Indiquer le type de calcul :</label>
+    <select id="scoremoy">
+      <option value="" selected hidden>--.--</option>
+      <option value="score">score</option>
+      <option value="moyenne">moyenne</option>
+    </select>
+
+    <br><br>
+    <button id="validerBtn">Valider</button>
+
+<div class="text-container">
+  <div class="text-bg"></div> <!-- المستطيل -->
+  <div id="sc-text" class="sc-texte">sc.techniques</div> <!-- النص -->
+</div>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log("✅ SW registered", reg))
+        .catch(err => console.error("❌ SW registration failed", err));
+    });
+  }
+</script>
+
+    <!-- JavaScript -->
+    <script src="ScriptMoyTech.js"></script>
+  </body>
+</html>
